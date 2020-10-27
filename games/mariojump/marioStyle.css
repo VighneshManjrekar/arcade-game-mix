@@ -1,0 +1,117 @@
+.game {
+  overflow: hidden;
+  height: 254px;
+  width: 500px;
+  border: black solid 1px;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.323);
+  margin: auto;
+  background-image: url("https://raw.githubusercontent.com/VighneshManjrekar/ArcadeGamesMix/main/games/mariojump/images/bg1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#mario {
+  height: 50px;
+  width: 20px;
+  background-image: url("https://raw.githubusercontent.com/VighneshManjrekar/ArcadeGamesMix/main/games/mariojump/images/block1.png");
+  position: relative;
+  top: 200px;
+  left: 5px;
+}
+
+#pipe {
+  width: 18px;
+  height: 20px;
+  background-image: url("https://raw.githubusercontent.com/VighneshManjrekar/ArcadeGamesMix/main/games/mariojump/images/block.png");
+  position: relative;
+  top: 180px;
+  left: 380px;
+  animation: block 1s infinite linear;
+  animation-play-state: paused;
+}
+
+.animate {
+  animation: jump 500ms;
+}
+
+@keyframes jump {
+  0% {
+    top: 200px;
+  }
+
+  30% {
+    top: 160px;
+  }
+
+  70% {
+    top: 160px;
+  }
+
+  100% {
+    top: 200px;
+  }
+}
+
+@keyframes block {
+  0% {
+    left: 550px;
+  }
+
+  100% {
+    left: -50px;
+  }
+}
+
+#score-banner {
+  text-transform: uppercase;
+  color: white;
+  margin: 15px;
+  font-size: 12px;
+  clear: both;
+  float: right;
+}
+
+#high-score-banner {
+  text-transform: uppercase;
+  margin: 15px;
+  font-size: 10px;
+  float: right;
+  clear: both;
+}
+
+#play {
+  width: 100%;
+  font-size: 100px;
+  text-align: center;
+  margin: 50px auto;
+  height: 100%;
+}
+
+@media only screen and (max-width: 500px) {
+  .game {
+    height: 252px;
+    width: 350px;
+  }
+
+  #pipe {
+    top: 180px;
+    left: 350px;
+    animation: mobile-block 1s infinite linear;
+    animation-play-state: paused;
+  }
+
+  @keyframes mobile-block {
+    0% {
+      left: 380px;
+    }
+
+    100% {
+      left: -40px;
+    }
+  }
+
+  #play {
+    font-size: 90px;
+  }
+}

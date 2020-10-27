@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Games Mix</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="main">
+        <center><a href="index.html"><img src="https://magicplay.eu/files/logo%5B1%5D.png" id="image" width="300px"></a>
+        </center>
+        <div class="mobile-disp">
+            <button id="nav-btn" onclick="show()"><i class="fa fa-bars" style="font-size:36px"></i></button>
+            <ul id="mob-nav">
+                <li><a href='index.html'><button type="button" class="btn btn-light">Home</button></a></li>
+                <li><a href='game.html'><button type="button" class="btn btn-success">Games</button></a></li>
+                <li><a href='https://arcade-games-mix.herokuapp.com/'><button type="button" class="btn btn-warning">ChatBox</button></a></li>
+                <li><a href='highscore.html'><button type="button" class="btn btn-danger">HighScores</button></a></li>
+                <!-- <li><a href='login.html'><button type="button" class="btn btn-danger">Login</button></a></li> -->
+                <!-- <li><a href='register.html'><button type="button" class="btn btn-dark">Register</button></a></li> -->
+            </ul>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href='index.html'><button type="button" class="btn btn-light">Home</button></a></li>
+                <li><a href='game.html'><button type="button" class="btn btn-success">Games</button></a></li>
+                <li><a href='https://arcade-games-mix.herokuapp.com/'><button type="button" class="btn btn-warning">ChatBox</button></a></li>
+                <li><a href='highscore.html'><button type="button" class="btn btn-danger">HighScores</button></a></li>
+                <!-- <li><a href='login.html'><button type="button" class="btn btn-danger">Login</button></a></li> -->
+                <!-- <li><a href='register.html'><button type="button" class="btn btn-dark">Register</button></a></li> -->
+            </ul>
+        </div>
+        <div class="jumbotron" id="index-jumbotron">
+            <h1 class="title">Welcome to our Arcade Games website!!!</h1>
+            <hr class="my-4">
+            <p id="p-text"> We've been steadily creating fun and challenging video games inspiring from the old 90s
+                arcade games. We use HTML, CSS, and JavaScript to redesign fun old games. We put all of our heart in our
+                work to make the best computer and console games that can be enjoyed by gamers of all generations.</p>
+            <a class="btn btn-primary btn-lg" href="game.html" role="button">Let's Play</a>
+            </p>
+        </div>
+        <h2 id="ac">Our Creators</h2>
+        <center><span class="menu">Hover images to know more</span></center>
+        <center><span class="mobile-disp">Click images to know more</span></center>
+        <div id="about">
+            <div class="card">
+                <div class="imgBx">
+                    <img src="https://lh3.googleusercontent.com/pw/ACtC-3dLC6BTLFG5t-fWDzsgAogpA_fs1CLy9FYUv6oDSRYn0JhpknJ34mfAnclOT2ynCAk3uZhGyO5FM_vc9BWdDKt2sqlvPSkJizE1-JRHCov95rQUP7H695tAxjFgZBM0uEVZCRxBY7eWnR4ciIJnbr0N0A=w877-h657-no?authuser=0"
+                        alt="Vighnesh-Manjrekar-image">
+                </div>
+                <div class="details">
+                    <h2>Vighnesh<br />Manjrekar<br><span>3129</span></h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgBx">
+                    <img src="https://lh3.googleusercontent.com/pw/ACtC-3e4MCVQ2icqtmIrEZpZabBwY6IzE4mJqnRIieCjCbAqSAh6gg-xXlSQTsoyCtfJC4j_Niq_CXkhCfU9427e9zypT_g8etijO7yKk_toiLTkjZmLRYagc2o_bGM97m8JQxSSdQuIrW8HcLiFVXtZmHHQMA=w720-h540-no?authuser=0"
+                        alt="Varad-Disale-image">
+                </div>
+                <div class="details">
+                    <h2>Varad<br />Disale<br><span>3148</span></h2>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="imgBx">
+                    <img src="https://lh3.googleusercontent.com/pw/ACtC-3fvEvEMqOA6mNc9bnlr04HJgeTpLaAeWmM_MMxD4DK_nUdUyNZfchhMruduEoJRX2_GsatH4dLFJf3zKFJVfF8DK5nSsCfGhrUDOmGLeZNJ8Qe5f2cszDENIfm9HOnk8wvLxla_pUf4n_JJujUvB1TW8Q=w789-h591-no?authuser=0"
+                        alt="Atharv-Ghadge-image">
+                </div>
+                <div class="details">
+                    <h2>Atharv<br />Ghadge<br><span>3153</span></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var nav = document.getElementById('mob-nav')
+    function show() {
+        if (nav.style.display == "none") {
+            nav.style.display = "flex"
+        } else {
+            nav.style.display = "none"
+        }
+    }
+</script>
+
+</html>

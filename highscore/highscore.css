@@ -1,0 +1,152 @@
+*{
+  box-sizing: border-box;
+}
+.status {
+  width: 80%;
+  margin: 0px auto 40px auto;
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 20px;
+}
+
+.hide{
+  display: none;
+}
+
+.search-country{
+  position: relative;
+}
+.search-box{
+  position: absolute;
+  z-index: 1;
+  align-items: center;
+  display: flex;
+  width: 300px;
+  height: 30px;
+  justify-content: space-between;
+  background-color: #111;
+}
+.search-box input{
+  width: 270px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  padding-left: 15px;
+  font-size: 0.7em;
+  outline: none;
+}
+.close-btn{
+  color: white;
+  font-size: 1em;
+  margin: 5px;
+  cursor: pointer;
+  padding-bottom: 5px;   
+}
+.country-list{
+  position: absolute;
+  width: 300px;
+  top:30px;
+  height: 270px;
+  font-size: 0.8em;
+  background-color: #111;
+  opacity: 0.9;
+  overflow-y: auto;
+}
+.country-list ul {
+  width: 100%;
+}
+.country-list ul li{
+  list-style-type: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 0.7em;
+}
+.country-list ul li:hover{
+  border-left: solid 3px #fff;
+}
+.country-list::-webkit-scrollbar-track
+{
+	background-color: transparent;
+}
+.country-list::-webkit-scrollbar
+{
+	width: 7px;
+}
+.country-list::-webkit-scrollbar-thumb
+{
+  background-color: lightgray;
+  border-radius: 20px;
+}
+
+
+.value {
+  font-size: 1em;
+  margin: 10px;
+  font-weight: bolder;
+}
+.new-value {
+  color: red;
+  font-weight: lighter;
+  font-size: 0.7em;
+}
+.class-title,
+.country-name {
+  font-size: 1.2em;
+}
+
+.change-country {
+  font-size: 0.7em;
+  margin: 10px;
+  cursor: pointer;
+}
+.death .value {
+  color: #f44336;
+}
+.recovered .value {
+  color: #009688;
+}
+.recovered .new-value {
+  color: green;
+}
+
+@media only screen and (max-width: 1100px) {
+  .value {
+    font-size: 0.8em;
+  }
+  .new-value {
+    font-size: 0.5em;
+    margin-bottom: 15px;
+  }
+  .class-title,
+  .country-name {
+    font-size: 1em;
+    margin-top: 10px;
+  }
+
+  .change-country {
+    font-size: 0.5em;
+    margin: 8px;
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (max-width: 870px) {
+  .status {
+    display: flex;
+    width: 320px;
+    min-width: 340px;
+    flex-flow: column;
+    align-items: flex-start;
+  }
+  .value {
+    font-size: 1em;
+  }
+  .change-country,
+  .new-value {
+    font-size: 0.6em;
+  }
+}

@@ -1,0 +1,116 @@
+.game {
+    width: 350px;
+    height: 550px;
+    margin: auto;
+    background-color: #2f2f2f;
+}
+
+#road {
+    width: 190px;
+    height: 550px;
+    border-left: solid #fcdb57 5px;
+    border-right: solid #fcdb57 5px;
+    margin: auto;
+    background-image: url('https://raw.githubusercontent.com/VighneshManjrekar/ArcadeGamesMix/main/games/carDrive/images/bg2.png');
+    background-repeat: repeat-y;
+    background-position-y: 0;
+    animation: road 1s linear infinite;
+    animation-play-state: paused;
+    overflow-y: hidden;
+}
+
+#car {
+    display: block;
+    width: 50px;
+    height: 90px;
+    position: relative;
+    top: 360px;
+    left: 50px;
+    margin: 0 17px;
+    transform: rotate(180deg);
+    background-image: url('https://raw.githubusercontent.com/VighneshManjrekar/ArcadeGamesMix/main/games/carDrive/images/car.png');
+    background-size: cover;
+    background-position: center;
+}
+
+#block {
+    display: block;
+    width: 40px;
+    margin: 0 5px;
+    height: 90px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    margin: 0 17px;
+    z-index: 1;
+    background-image: url('https://raw.githubusercontent.com/VighneshManjrekar/ArcadeGamesMix/main/games/carDrive/images/block.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.animate {
+    animation: slide 700ms linear infinite;
+    animation-play-state: paused;
+}
+
+@keyframes slide {
+    0% {
+        top: 0px;
+    }
+
+    100% {
+        top: 550px;
+    }
+}
+
+#left,
+#right {
+    width: 50%;
+    position: absolute;
+    height: 100vh;
+}
+
+#right {
+    left: 50%;
+}
+
+@keyframes road {
+    0% {
+        background-position-y: 660px;
+    }
+
+    25% {
+        background-position-y: 495px;
+    }
+
+    50% {
+        background-position-y: 330px;
+    }
+
+    75% {
+        background-position-y: 165px;
+    }
+
+    100% {
+        background-position-y: 0;
+
+    }
+}
+
+#score,#score-data {
+    margin-top: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    margin-bottom: 40px;
+}
+
+#play {
+    width: 100%;
+    color: white;
+    font-size: 130px;
+    text-align: center;
+    margin: 50px auto;
+    height: 100%;
+}

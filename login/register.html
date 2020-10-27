@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Games Mix</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="main">
+        <center><a href="index.html"><img src="https://magicplay.eu/files/logo%5B1%5D.png" id="image" width="300px"></a>
+        </center>
+        <div class="mobile-disp">
+            <button id="nav-btn" onclick="show()"><i class="fa fa-bars" style="font-size:36px"></i></button>
+            <ul id="mob-nav">
+                <li><a href='index.html'><button type="button" class="btn btn-light">Home</button></a></li>
+                <li><a href='game.html'><button type="button" class="btn btn-success">Games</button></a></li>
+                <li><a href='https://arcade-games-mix.herokuapp.com/'><button type="button"
+                            class="btn btn-warning">ChatBox</button></a></li>
+                <li><a href='login.html'><button type="button" class="btn btn-danger">Login</button></a></li>
+                <li><a href='register.html'><button type="button" class="btn btn-dark">Register</button></a></li>
+            </ul>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href='index.html'><button type="button" class="btn btn-light">Home</button></a></li>
+                <li><a href='game.html'><button type="button" class="btn btn-success">Games</button></a></li>
+                <li><a href='https://arcade-games-mix.herokuapp.com/'><button type="button"
+                            class="btn btn-warning">ChatBox</button></a></li>
+                <li><a href='login.html'><button type="button" class="btn btn-danger">Login</button></a></li>
+                <li><a href='register.html'><button type="button" class="btn btn-dark">Register</button></a></li>
+            </ul>
+        </div>
+        <div class="form">
+            <form>
+                <table>
+                    <tr>
+                        <td>
+                            <label for="name" class="lbl">Name</label>
+                        </td>
+                        <td class="input-data">
+                            <input type="text" name="name" id="name" class="inp" size="30"
+                                placeholder="Enter your name"><br />
+                        </td>
+                    </tr>
+                    <tr>
+                    <tr>
+                        <td>
+                            <label for="email" class="lbl">Email-Id</label>
+                        </td>
+                        <td class="input-data">
+                            <input type="email" name="email" id="email" class="inp" size="30"
+                                placeholder="Enter your mail"><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pass" class="lbl">Password</label>
+                        </td>
+                        <td class="input-data">
+                            <input type="password" name="pass" id="pass" class="inp" size="30"
+                                placeholder="Enter your password"><br />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="pass1" class="lbl">Confirm Password</label>
+                        </td>
+                        <td class="input-data">
+                            <input type="password" name="pass1" id="pass1" class="inp" size="30"
+                                placeholder="Confirm your password"><br />
+                        </td>
+                    </tr>
+                </table>
+                <button type="submit" class="btn btn-primary"><a href="register.html" style="color: white; text-decoration: none;">Register</a></button>
+                <button type="submit" class="btn btn-primary"><a href="login.html" style="color: white; text-decoration: none;"></a>Login</a></button>
+
+            </form>
+        </div>
+        <div class="mobile-form form">
+            <form>
+                <label for="name" class="lbl">Name</label><br />
+                <input type="text" name="name" id="name" class="inp" size="30" placeholder="Enter your name">
+                <label for="email" class="lbl">Email-Id</label><br />
+                <input type="email" name="email" id="email" class="inp" size="30" placeholder="Enter your mail">
+                <label for="pass" class="lbl">Password</label><br />
+                <input type="password" name="pass" id="pass" class="inp" size="30" placeholder="Enter your password">
+                <label for="pass1" class="lbl">Confirm Password</label><br />
+                <input type="password" name="pass1" id="pass1" class="inp" size="30"
+                    placeholder="Confirm your password">
+                    <button type="submit" class="btn btn-primary"><a href="register.html" style="color: white; text-decoration: none;">Register</a></button>
+                    <button type="submit" class="btn btn-primary"><a href="login.html" style="color: white; text-decoration: none;"></a>Login</a></button>
+            </form>
+        </div>
+    </div>
+</body>
+<script>
+    var nav = document.getElementById('mob-nav')
+    function show() {
+        if (nav.style.display == "none") {
+            nav.style.display = "flex"
+        } else {
+            nav.style.display = "none"
+        }
+    }
+</script>
+
+</html>

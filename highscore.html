@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en" onload="handleOk()">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Games Mix</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="highscore/highscore.css">
+</head>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+
+<body>
+    <div id="main">
+        <center><a href="index.html"><img src="https://magicplay.eu/files/logo%5B1%5D.png" id="image" width="300px"></a>
+        </center>
+        <div class="mobile-disp">
+            <button id="nav-btn" onclick="show()"><i class="fa fa-bars" style="font-size:36px"></i></button>
+            <ul id="mob-nav">
+                <li><a href='index.html'><button type="button" class="btn btn-light">Home</button></a></li>
+                <li><a href='game.html'><button type="button" class="btn btn-success">Games</button></a></li>
+                <li><a href='https://arcade-games-mix.herokuapp.com/'><button type="button"
+                            class="btn btn-warning">ChatBox</button></a></li>
+                <li><a href='highscore.html'><button type="button" class="btn btn-danger">HighScores</button></a></li>
+                <!-- <li><a href='login.html'><button type="button" class="btn btn-danger">Login</button></a></li>
+                <li><a href='register.html'><button type="button" class="btn btn-dark">Register</button></a></li> -->
+            </ul>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href='index.html'><button type="button" class="btn btn-light">Home</button></a></li>
+                <li><a href='game.html'><button type="button" class="btn btn-success">Games</button></a></li>
+                <li><a href='https://arcade-games-mix.herokuapp.com/'><button type="button"
+                            class="btn btn-warning">ChatBox</button></a></li>
+                <li><a href='highscore.html'><button type="button" class="btn btn-danger">HighScores</button></a></li>
+                <!-- <li><a href='login.html'><button type="button" class="btn btn-danger">Login</button></a></li>
+                <li><a href='register.html'><button type="button" class="btn btn-dark">Register</button></a></li> -->
+            </ul>
+        </div>
+    </div>
+    <center>
+        <h1>Covid Stats</h1>
+    </center><br />
+    <div class="status">
+        <div class="country">
+            <div class="country-name">Loading</div>
+            <div class="change-country" style="color: blue;">change country</div>
+            <div class="search-country hide">
+                <div class="search-box">
+                    <input type="text" placeholder="Search country..." autocomplete="off" id="search-input">
+                    <div class="close-btn">&#10006</div>
+                </div>
+                <div class="country-list">
+
+                </div>
+            </div>
+        </div>
+        <div class="total-cases">
+            <div class="class-title">TotalCases</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div>
+        </div>
+        <div class="recovered">
+            <div class="class-title">Recovered</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div>
+        </div>
+        <div class="death">
+            <div class="class-title">Deaths</div>
+            <div class="value">0</div>
+            <div class="new-value">+0</div>
+        </div>
+    </div>
+    <h2 id="ac">LeadBoard</h2>
+    <table id="hs">
+        <tr class="table-light table-row">
+            <td>Game</td>
+            <td>Player</td>
+            <td class="table-score">Score</td>
+        </tr>
+        <tr class="table-warning table-row">
+            <td>MarioJump</span></td>
+            <td><span id="mario-player"></span></td>
+            <td class="table-score"><span id="mario-score"></span></td>
+        </tr>
+        <tr class="table-danger table-row">
+            <td>Stack</span></td>
+            <td><span id="stack-player"></span></td>
+            <td class="table-score"><span id="stack-score"></span></td>
+        </tr>
+        <tr class="table-primary table-row">
+            <td>CarDrive</span></td>
+            <td><span id="car-player"></span></td>
+            <td class="table-score"><span id="car-score"></span></td>
+        </tr>
+    </table><br /><br /><br />
+
+    </div>
+</body>
+<script src="highscore/highscoreScript.js" defer></script>
+<script src="highscore/covidTrack.js" defer></script>
+
+</html>

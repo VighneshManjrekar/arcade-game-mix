@@ -1,0 +1,57 @@
+:root {
+  --width: 200px;
+}
+
+.game {
+  overflow: hidden;
+  height: 450px;
+  width: 300px;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.323);
+  margin: auto;
+  background-image: linear-gradient(#1f68bf, #58cee3);
+}
+
+.slider {
+  width: 100px;
+  height: 18px;
+  background-image: linear-gradient(#ffb6b5, #ff6a8a, #ff6a8a);
+  visibility: hidden;
+  position: relative;
+}
+
+.animate {
+  animation: slide 1550ms linear infinite;
+}
+
+@keyframes slide {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: var(--width);
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+#slider1 {
+  visibility: visible;
+}
+
+#score {
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  font-size: 14px;
+  color: white;
+  margin-top: 10px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 400px) {
+  .animate {
+    animation: slide 1750ms linear infinite;
+  }
+}

@@ -1,0 +1,142 @@
+.game {
+  height: 380px;
+  width: 330px;
+  text-transform: uppercase;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.323);
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+    url("images/bg6.png");
+  background-size: cover;
+  position: center center;
+  flex-flow: column;
+  animation: light 1.5s linear infinite;
+  text-align: center;
+  padding: 15px;
+}
+
+@keyframes light {
+  0% {
+    border: solid 5px yellow;
+  }
+  20% {
+    border: solid 5px orange;
+  }
+  40% {
+    border: solid 5px red;
+  }
+  60% {
+    border: solid 5px blue;
+  }
+  80% {
+    border: solid 5px greenyellow;
+  }
+  100% {
+    border: solid 5px pink;
+  }
+}
+
+#logo > img {
+  filter: drop-shadow(5px 5px 5px black);
+  width: 110px;
+}
+
+#start > img {
+  width: 176px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+  border-radius: 20px;
+  height: 99px;
+}
+
+#ready-banner > img {
+  margin-top: 20px;
+  width: 170px;
+  border-radius: 20px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+  margin: auto;
+}
+
+#puzzle {
+  display: none;
+  width: 176px;
+  height: 99px;
+  margin: auto;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9));
+}
+
+@keyframes light-2px {
+  0% {
+    border: solid 2px yellow;
+  }
+  20% {
+    border: solid 2px orange;
+  }
+  40% {
+    border: solid 2px red;
+  }
+  60% {
+    border: solid 2px blue;
+  }
+  80% {
+    border: solid 2px greenyellow;
+  }
+  100% {
+    border: solid 2px pink;
+  }
+}
+#puzzle {
+  display: none;
+}
+
+.btn-1 {
+  border: none;
+  text-transform: uppercase;
+  width: 150px;
+  padding: 7px 10px;
+  font-size: 15px;
+  text-align: center;
+  margin: auto;
+  border-radius: 10px;
+  border: solid 2px black;
+  cursor: pointer;
+}
+#answer-btn {
+  display: flex;
+}
+.submit {
+  margin: 5px;
+  padding: 5px 8px;
+  display: none;
+  font-size: 13px;
+}
+
+#input-field {
+  display: none;
+  text-transform: uppercase;
+  text-align: center;
+  outline: none;
+  border: 1px solid black;
+  padding: 5px;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.323);
+  font-size: 12px;
+  margin: 8px;
+  border-radius: 10px;
+}
+
+.btn-class > button {
+  cursor: pointer;
+  outline: none;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  box-shadow: 3px 3px black;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 10px;
+}
+#result {
+  font-size: 14px;
+  width: 300px;
+  margin: 10px auto 40px;
+  text-align: center;
+}

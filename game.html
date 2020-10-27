@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arcade Games Mix</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div id="main">
+        <center><a href="index.html"><img src="https://magicplay.eu/files/logo%5B1%5D.png" id="image" width="300px"></a>
+        </center>
+        <div class="mobile-disp">
+            <button id="nav-btn" onclick="show()"><i class="fa fa-bars" style="font-size:36px"></i></button>
+            <ul id="mob-nav">
+                <li><a href='index.html'><button type="button" class="btn btn-light">Home</button></a></li>
+                <li><a href='game.html'><button type="button" class="btn btn-success">Games</button></a></li>
+                <li><a href='https://arcade-games-mix.herokuapp.com/'><button type="button" class="btn btn-warning">ChatBox</button></a></li>
+                <li><a href='highscore.html'><button type="button" class="btn btn-danger">HighScores</button></a></li>
+                <!-- <li><a href='login.html'><button type="button" class="btn btn-danger">Login</button></a></li>
+                <li><a href='register.html'><button type="button" class="btn btn-dark">Register</button></a></li> -->
+            </ul>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href='index.html'><button type="button" class="btn btn-light">Home</button></a></li>
+                <li><a href='game.html'><button type="button" class="btn btn-success">Games</button></a></li>
+                <li><a href='https://arcade-games-mix.herokuapp.com/'><button type="button" class="btn btn-warning">ChatBox</button></a></li>
+                <li><a href='highscore.html'><button type="button" class="btn btn-danger">HighScores</button></a></li>
+                <!-- <li><a href='login.html'><button type="button" class="btn btn-danger">Login</button></a></li>
+                <li><a href='register.html'><button type="button" class="btn btn-dark">Register</button></a></li> -->
+            </ul>
+        </div>
+        <div id="games">
+            <div class="card" style="width: 18rem;">
+                <img src="https://cdn.mos.cms.futurecdn.net/BZHTN5GqDwow4qSi7jfX59.jpg" class="card-img-top"
+                    alt="MarioJump">
+                <div class="card-body">
+                    <h5 class="card-title">Mario Jump</h5>
+                    <p class="card-text">Save running Mario from obstacles!!</p><br /><br />
+                    <a href="games/mariojump/index.html" class="btn btn-primary">Lest's go</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://www.frostclick.com/wp/wp-content/uploads/2016/02/Stack_game.jpg" class="card-img-top"
+                    alt="stack">
+                <div class="card-body">
+                    <h5 class="card-title">Stack Build</h5>
+                    <p class="card-text">Building stacks not so easy!</p><br />
+                    <a href="games/stack/index.html" class="btn btn-primary">Lest's go</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://i.ytimg.com/vi/6zp29NYPzXI/hqdefault.jpg" class="card-img-top" alt="MarioJump">
+                <div class="card-body">
+                    <h5 class="card-title">Driving Car</h5>
+                    <p class="card-text">How alert is your driving sense?</p>
+                    <a href="games/carDrive/index.html" class="btn btn-primary">Lest's go</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://scontent.fbom20-1.fna.fbcdn.net/v/t1.0-9/p960x960/67063532_1457575461048926_5685992587677138944_o.jpg?_nc_cat=107&_nc_sid=8024bb&_nc_ohc=Hioyc6QGqpgAX_n3N_u&_nc_ht=scontent.fbom20-1.fna&tp=6&oh=a55ae6182363f54aa03c80f6956dedc8&oe=5F9D702E"
+                    class="card-img-top" alt="DumbCharades">
+                <div class="card-body"><br />
+                    <h5 class="card-title">Dumb Charades</h5>
+                    <p class="card-text">Test your bollywood skills ;) !!</p><br />
+                    <a href="games/dumsharaz/index.html" class="btn btn-primary">Lest's go</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://cdn.dribbble.com/users/1994564/screenshots/6796369/rps-logo_1x.jpg"
+                    class="card-img-top" alt="Rps"><br /><br /><br />
+                <div class="card-body">
+                    <h5 class="card-title">Rock Paper Scissor</h5>
+                    <p class="card-text">You're against computer choose wisely your move</p><br />
+                    <a href="games/r-p-s/index.html" class="btn btn-primary">Lest's go</a>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img src="https://lh3.googleusercontent.com/UDFR7uXaHPbhBuGy_b_02NFJH7ktqjU-nb0JNlVeo22wSPLdR1j5KpvqJtvUD5tzmys"
+                    class="card-img-top" alt="WordScrammble">
+                <div class="card-body">
+                    <h5 class="card-title">JavaScript Keyword Scramble</h5>
+                    <p class="card-text">Test your JavaScript knowledge here!</p>
+                    <a href="games/wordplay/index.html" class="btn btn-primary">Lest's go</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var nav = document.getElementById('mob-nav')
+    function show() {
+        if (nav.style.display == "none") {
+            nav.style.display = "flex"
+        } else {
+            nav.style.display = "none"
+        }
+    }
+</script>
+
+</html>
