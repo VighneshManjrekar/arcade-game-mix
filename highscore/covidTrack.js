@@ -279,7 +279,7 @@ var obj
 
 var request = new XMLHttpRequest();
 
-request.open('GET', 'https://api.ipdata.co/?api-key=test');
+request.open('GET', 'https://api.ipdata.co/?api-key=598d7cf1a1a42159cf9fb0a5ae31d6a131cdad763dba74b4bd5699f4');
 
 request.setRequestHeader('Accept', 'application/json');
 
