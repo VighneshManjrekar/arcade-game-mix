@@ -1,3 +1,4 @@
+document.addEventListener('contextmenu', event => event.preventDefault())
 var nav = document.getElementById('mob-nav')
 function show() {
     if (nav.style.display == "none") {
