@@ -1,4 +1,5 @@
 var nav = document.getElementById('mob-nav')
+document.addEventListener('contextmenu', event => event.preventDefault())
 function show() {
     if (nav.style.display == "none") {
         nav.style.display = "flex"
