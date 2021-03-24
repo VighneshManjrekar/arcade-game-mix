@@ -1,0 +1,79 @@
+.game{
+    width: 350px;
+    height: 525px;
+    /* border: solid black 1px; */
+    /* margin-bottom: 200px; */
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    position: absolute;   
+}
+
+.sky{
+    width: 350px;
+    height: 437.5px;
+    background-image: url("images/sky.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.ground{
+    width: 350px;
+    height: 87.5px;
+    background-image: url("images/groud.jpg");
+    background-size: cover;
+    /* overflow: hidden; */
+    z-index: 3;
+    position: absolute;
+    animation: slide 2.5s infinite linear;
+}
+
+@keyframes slide{
+    0%{
+        background-position-x:400px;
+    }
+    100%{
+        background-position-x: 0px;
+    }
+}
+
+.bird{
+    background-image: url("images/bird.png");
+    background-position: center;
+    background-size: cover;
+    width: 50px;
+    height: 35px;
+    position: absolute;
+    left: 100px;
+}
+
+.pipe{
+    background-color: transparent;
+    background-image: url('images/pipe2.png');
+    background-position: center;
+    background-size: cover;
+    width: 50px;
+    height: 250px;
+    /* margin-bottom: 200px; */
+    position:absolute;
+}
+
+.topPipe{
+    background-color: transparent;
+    background-image: url('images/pipe2.png');
+    background-position: initial;
+    background-size: cover;
+    width: 50px;
+    height: 250px;
+    transform: rotate(180deg);
+    position: absolute;
+
+}
+
+#score{
+    position: absolute;
+    left: 260px;
+    font-size: 15px;
+    color: white;
+}
