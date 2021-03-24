@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var play = document.getElementById('play')
     const playGame = setInterval(function () {
         start()
-        play.innerHTML = i
+        play.innerHTML = i +'<span style="font-size:14px; ">\nTap to fly</span>'
     }, 1000)
 
     function start() {
