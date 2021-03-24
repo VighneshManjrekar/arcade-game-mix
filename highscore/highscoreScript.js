@@ -57,3 +57,17 @@ function getDataStack(data) {
 function errDataStack(err) {
     console.log(err)
 }
+
+
+var ref = database.ref('users/flappy')
+ref.on('value', getDataFlappy, errDataFlappy)
+
+function getDataFlappy(data) {
+    var flappyHighScoreName = data.val().playerName
+    var flappyHighScore = data.val().playerScore
+    document.getElementById('flappy-player').innerText = flappyHighScoreName
+    document.getElementById('flappy-score').innerText = flappyHighScore
+}
+function errDataFlappy(err) {
+    console.log(err)
+}
