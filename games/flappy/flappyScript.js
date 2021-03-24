@@ -8,25 +8,55 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // var firebaseConfig = {
-    //     apiKey: "AIzaSyBffsEoJZLDTc-hq-e1FkJdY-uvSofoBaE",
-    //     authDomain: "arcade-highscore.firebaseapp.com",
-    //     databaseURL: "https://arcade-highscore.firebaseio.com",
-    //     projectId: "arcade-highscore",
-    //     storageBucket: "arcade-highscore.appspot.com",
-    //     messagingSenderId: "333323248754",
-    //     appId: "1:333323248754:web:94bb79b09d813bf1748eeb",
-    //     measurementId: "G-73FQWCC1TG"
-    // };
-    // // Initialize Firebase
-    // firebase.initializeApp(firebaseConfig);
-    // firebase.analytics();
-    // var database = firebase.database();
+    var firebaseConfig = {
+        apiKey: "AIzaSyBffsEoJZLDTc-hq-e1FkJdY-uvSofoBaE",
+        authDomain: "arcade-highscore.firebaseapp.com",
+        databaseURL: "https://arcade-highscore.firebaseio.com",
+        projectId: "arcade-highscore",
+        storageBucket: "arcade-highscore.appspot.com",
+        messagingSenderId: "333323248754",
+        appId: "1:333323248754:web:94bb79b09d813bf1748eeb",
+        measurementId: "G-73FQWCC1TG"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    var database = firebase.database();
 
 
     const bird = document.querySelector('.bird')
     const game = document.querySelector('.game')
     const ground = document.querySelector('.ground')
+
+    let i = 5
+    let save
+    let newScore
+    let ref = database.ref('users/flappy')
+    ref.on('value', getData, errData)
+
+    function getData(data) {
+        save = data.val().playerScore
+    }
+    function errData(err) {
+        console.log(err)
+    }
+
+    var play = document.getElementById('play')
+    const playGame = setInterval(function () {
+        start()
+        play.innerHTML = i
+    }, 1000)
+
+    function start() {
+        i--
+    }
+
+    setTimeout(() => {
+        clearInterval(playGame)
+        ground.style.animationPlayState = "running"
+        play.style.display = "none"
+    }, 5000);
+
 
     let count = 0
     let gravity = 3
@@ -94,26 +124,42 @@ document.addEventListener("DOMContentLoaded", () => {
             clearInterval(makeTimer)
             clearInterval(fallTimer)
             ground.style.animationPlayState = "paused"
-            if(count>0){
-                alert("oops!!\nYour Score : "+(count-1))
+            console.log(count)
+            console.log(save)
+
+            if (count > save) {
+                var name = prompt('You scored high score \nEnter your name : ')
+                firebase.database().ref('users/flappy').set({
+                    playerName: name,
+                    playerScore: count
+                });
+            }
+            if (count > 0) {
+                alert("oops!!\nYour Score : " + (count - 1))
                 window.location.reload();
-            }else{
+            } else {
                 alert("oops!!\nYour Score : 0")
                 window.location.reload();
             }
 
+
         }
     }
-    let makeTimer = setInterval(makePipe, 2500)
-    let fallTimer = setInterval(fall, 20)
-    document.addEventListener('keypress', jump)
-    document.addEventListener('click', jump)
+    let makeTimer
+    let fallTimer
+    setTimeout(() => {
+        makeTimer = setInterval(makePipe, 2500)
+        fallTimer = setInterval(fall, 20)
+        setInterval(function () {
+            if (isGameOver === false) {
+                document.getElementById('score').innerHTML = "Score " + count
+                count++
+            }
+        }, 2400)
+        document.addEventListener('keypress', jump)
+        document.addEventListener('click', jump)
 
-    setInterval(function(){
-        if(isGameOver === false){
-        document.getElementById('score').innerHTML = "Score " + count
-        count++
-    }
-    },2400)
+    }, 5000)
 
+    document.addEventListener('contextmenu', event => event.preventDefault())
 })
