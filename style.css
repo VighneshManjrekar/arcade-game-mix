@@ -1,324 +1,272 @@
 * {
-  font-family: "Press Start 2P", cursive;
-  margin: 0;
-  padding: 0;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-body {
-  background-position: center;
-  background-size: cover;
-  background-image: url("https://www.androidguys.com/wp-content/uploads/2016/04/8bit_wallpaper7.jpg");
-  overflow: auto;
-  background-repeat: no-repeat;
-  background-color: #7dad71 !important;
-}
-
-#main {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-}
-#image {
-  width: 250px;
-  margin: 40px auto 0 auto;
-}
-/* Desktop Navbar */
-.menu {
-  margin: 20px;
-}
-.menu ul {
-  margin-bottom: 50px;
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-flow: row;
-}
-.menu li {
-  margin: 20px;
-  list-style: none;
-}
-.btn {
-  padding: 10px 20px !important;
-  box-shadow: 6px 6px 6px rgba(128, 128, 128, 0.623);
-}
-.btn:hover {
-  box-shadow: none;
-  transform: translate3d(0, 8px, -5px);
-}
-
-/* About Us */
-#index-jumbotron {
-  background-color: #fee1dd !important;
-  background-position: center bottom;
-  background-size: cover;
-  width: 80%;
-  border-radius: 20px !important;
-  margin: auto;
-}
-.title {
-  color: #a81d4d;
-  font-size: 33px;
-}
-#p-text {
-  color: #135859;
-}
-
-/* Creators */
-#ac {
-  margin: 20px;
-  text-align: center;
-}
-#about {
-  margin: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-#about .card {
-  cursor: pointer;
-  width: 250px;
-  height: 250px;
-  margin: 30px;
-  background: #fff;
-  border-radius: 4px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-}
-#about .card:before,
-#about .card:after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  border-radius: 4px;
-  background-color: #fff;
-  transition: 0.5s;
-  z-index: -1;
-}
-#about .card:hover:before {
-  transform: rotate(20deg);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-}
-#about .card:hover:after {
-  transform: rotate(10deg);
-  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
-}
-
-.imgBx {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  bottom: 10px;
-  right: 10px;
-  background: #222;
-  transition: 0.5s;
-}
-#about .card:hover .imgBx {
-  bottom: 80px;
-}
-
-.imgBx img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.details {
-  margin-top: 165px;
-  text-align: center;
-}
-
-.details h2 {
-  margin-top: 10px;
-  font-size: 15px;
-  color: #777;
-  text-transform: uppercase;
-}
-
-.details span {
-  color: #f38695;
-  display: block;
-  margin-top: 5px;
-}
-
-/* Mobile NavBar */
-.mobile-disp {
-  margin: 20px;
-  display: none;
-}
-.mobile-disp .fa {
-  width: 100%;
-  text-align: center;
-}
-
-.mobile-disp ul {
-  width: 100%;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-}
-.mobile-disp ul li {
-  list-style-type: none;
-  margin: 10px auto;
-}
-#nav-btn {
-  width: 60%;
-  margin: auto;
-  cursor: pointer;
-  background-color: transparent;
-  border: none;
-  outline: none;
-}
-#mob-nav {
-  display: none;
-}
-
-.mobile-disp .btn {
-  text-transform: uppercase;
-  width: 178px;
-  height: 50px;
-  text-align: center;
-  box-shadow: 8px 8px 8px grey;
-  font-size: 15px;
-}
-.mobile-disp > .btn:hover {
-  box-shadow: none;
-  transform: translate3d(0, 5px, -5px);
-}
-
-/* Login & Register Page */
-.form {
-  box-sizing: border-box;
-  width: 70%;
-  margin: 0 auto 60px auto;
-  background-color: lightblue;
-  padding: 30px;
-  display: flex;
-  border-radius: 10px;
-  justify-content: center;
-}
-.inp {
-  width: 80%;
-  margin: 8px;
-  height: 30px;
-  font-size: 15px;
-  padding: 5px 10px;
-  border: none;
-  border-radius: 10px;
-}
-.lbl {
-  margin: 8px;
-  font-size: 15px;
-  cursor: pointer;
-}
-.form .btn {
-  margin: 20px;
-  padding: 6px !important;
-  font-size: 13px;
-  box-shadow: 3px 3px 3px gray;
-}
-.mobile-form {
-  display: none;
-}
-
-/* Games */
-#games {
-  justify-content: space-evenly;
-  width: 80%;
-  margin: auto;
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 50px;
-}
-#games .card {
-  padding: 5px;
-  margin: 14px;
-}
-
-/* Highscore */
-#hs {
-  margin: auto;
-  text-align: left;
-}
-
-.table-row,
-td {
-  padding: 5px 15px;
-  margin-right: 20px;
-}
-
-#ac {
-  font-family: "Press Start 2P", cursive;
-  font-size: 35px;
-  margin-top: 0px;
-  margin-bottom: 30px;
-}
-
-@media only screen and (max-width: 870px) {
+    font-family: "Press Start 2P", cursive;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-position: center;
+    background-size: cover;
+    background-image: url("images/bg4.png");
+    overflow: auto;
+    background-color: #7dad71 !important;
+  }
+  
+  #main {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
   #image {
-    width: 200px;
+    width: 320px;
+    margin: 40px auto 0 auto;
   }
+  /* Desktop Navbar */
   .menu {
-    display: none;
+    margin: 20px;
   }
-  .mobile-disp {
+  .menu ul {
+    margin-bottom: 50px;
+    align-items: center;
     justify-content: center;
     display: flex;
-    flex-flow: column;
+    flex-flow: row;
   }
-  .jumbotron {
-    width: 90%;
+  .menu li {
+    margin: 20px;
+    list-style: none;
   }
-  .title {
-    font-size: 20px;
+  .btn {
+    padding: 10px 20px !important;
+    box-shadow: 6px 6px 6px rgba(128, 128, 128, 0.623);
   }
-  #p-text {
-    font-size: 15px;
+  .btn:hover {
+    box-shadow: none;
+    transform: translate3d(0, 8px, -5px);
   }
-  #ac {
-    font-size: 25px;
-  }
-  #about {
-    flex-flow: column;
-    align-items: center;
-  }
-  .form {
-    display: none;
-  }
-  .mobile-form {
+  
+  /* About Us */
+  #index-jumbotron {
+    background-color: #f8dc81 !important;
+    background-position: center bottom;
+    background-size: cover;
+    width: 80%;
+    border-radius: 20px !important;
+    margin: auto;
     display: flex;
   }
-  .lbl {
-    font-size: 10px;
+  .title {
+    color: #a81d4d;
+    font-size: 33px;
+  }
+  #p-text {
+    color: #214151;
+  }
+  
+  /* Creators */
+  #ac {
+    margin: 20px;
+    text-align: center;
+  }
+  #about {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #about .card {
+    cursor: pointer;
+    width: 250px;
+    height: 250px;
+    margin: 30px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  }
+  .imgBx {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    background: #222;
+    transition: 0.5s;
+  }
+  #about .card:hover .imgBx {
+    bottom: 80px;
+  }
+  
+  .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .details {
+    margin-top: 165px;
+    text-align: center;
+  }
+  
+  .details h2 {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #777;
+    text-transform: uppercase;
+  }
+  
+  .details span {
+    color: #f38695;
+    display: block;
+    margin-top: 5px;
+  }
+  
+  .btn-lg{
+    font-size: 17px !important;
+  }
+
+  /* Mobile NavBar */
+  .mobile-disp {
+    margin: 20px;
+    display: none;
+  }
+  .mobile-disp .fa {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .mobile-disp ul {
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+  .mobile-disp ul li {
+    list-style-type: none;
+    margin: 10px auto;
+  }
+  #nav-btn {
+    width: 60%;
+    margin: auto;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    outline: none;
+  }
+  #mob-nav {
+    display: none;
+  }
+  
+  .mobile-disp .btn {
+    text-transform: uppercase;
+    width: 178px;
+    height: 50px;
+    text-align: center;
+    box-shadow: 8px 8px 8px grey;
+    font-size: 15px;
+  }
+  .mobile-disp > .btn:hover {
+    box-shadow: none;
+    transform: translate3d(0, 5px, -5px);
+  }
+  
+  /* Login & Register Page */
+  .form {
+    box-sizing: border-box;
+    width: 70%;
+    margin: 0 auto 60px auto;
+    background-color: lightblue;
+    padding: 30px;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
   }
   .inp {
-    width: 100%;
-    margin: 6px;
-    padding: 2px 5px;
-    height: 20px;
-    font-size: 10px;
+    width: 80%;
+    margin: 8px;
+    height: 30px;
+    font-size: 15px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+  }
+  .lbl {
+    margin: 8px;
+    font-size: 15px;
+    cursor: pointer;
   }
   .form .btn {
-    font-size: 8px;
-    margin: 8px;
+    margin: 20px;
+    padding: 6px !important;
+    font-size: 13px;
+    box-shadow: 3px 3px 3px gray;
   }
-}
-
-@media only screen and (max-width: 460px) {
-  .table-row,
-  td {
-    padding: 3px 10px;
-    font-size: 0.7rem;
+  .mobile-form {
+    display: none;
   }
-  .table-score {
-    padding: 3px 5px;
+  
+  /* Games */
+  #games {
+    justify-content: space-evenly;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
   }
-}
+  #games .card {
+    padding: 5px;
+    margin: 14px;
+  }
+  
+  @media only screen and (max-width: 870px) {
+    #image {
+      width: 270px;
+    }
+    .menu {
+      display: none;
+    }
+    .mobile-disp,#index-jumbotron {
+      justify-content: center;
+      display: flex;
+      flex-flow: column;
+    }
+    .jumbotron {
+      width: 90%;
+    }
+    .title {
+      font-size: 20px;
+    }
+    #p-text {
+      font-size: 15px;
+    }
+    #ac {
+      font-size: 25px;
+    }
+    #about {
+      flex-flow: column;
+      align-items: center;
+    }
+    .form {
+      display: none;
+    }
+    .mobile-form {
+      display: flex;
+    }
+    .lbl {
+      font-size: 10px;
+    }
+    .inp {
+      width: 100%;
+      margin: 6px;
+      padding: 2px 5px;
+      height: 20px;
+      font-size: 10px;
+    }
+    .form .btn {
+      font-size: 8px;
+      margin: 8px;
+    }
+  }
