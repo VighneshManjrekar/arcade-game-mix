@@ -39,20 +39,22 @@
             </ul>
         </div>
         <div class="game">
-            <h1>Rock Paper Scissor</h1>
-            <div class="images">
-                <img id="user-choice" src="images/p.png">
-                <img id="comp-choice" src="images/r.png">
+            <h3 id="head">Rock Paper Scissor</h3>
+            <div id="game-container">
+                <div id="user" ><center><img id="user-choice" alt="user-choice img" class="animate" src="images/r.png"></div></center>
+                <div id="comp"><center><img id="comp-choice" alt="comp-choice img" class="rev-animate"  src="images/r.png"></div></center>
             </div>
-            <h3>Choose Your Move</h3>
-            <div class="option">
-                <button id="r" onclick="ch(this)" value="r">Rock</button>
-                <button id="p" onclick="ch(this)" value="p">Paper</button>
-                <button id="s" onclick="ch(this)" value="s">Scissor</button>
+            <div id="choice">
+                <button class="choice-btn rock" onclick="choice(this)" value="r">Rock</button>
+                <button class="choice-btn paper" onclick="choice(this)" value="p">Paper</button>
+                <button class="choice-btn scissor" onclick="choice(this)" value="s">Scissor</button>
+            </div>
+            <p id="result">Result</p><br>
+            <div id="score">
+                <span class="score-counter">You : <span id="user-score">0</span></span>
+                <span class="score-counter">Comp : <span id="comp-score">0</span></span>
             </div>
         </div>
-        <div id="result">Results :  </div>
-        <div id="score">Score : </div>
     </div>
 </body>
 <script src="rpsScript.js"></script>
