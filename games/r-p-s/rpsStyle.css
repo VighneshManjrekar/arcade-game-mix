@@ -1,107 +1,142 @@
-.game{
-    width: 400px;
-    height: 400px;
-    border: solid black 2px;
-    margin: auto;
+body {
+    font-size: 10px;
+  }
+  .game {
+    width: 50em;
+    height: 50em;
+    margin: 0px auto 50px auto;
     background-color: white;
-    display: flex;
-    flex-flow: column;
+    border-radius: 10px;
+  }
+  
+  #head {
     text-align: center;
-    margin-bottom: 10px;
-}
-
-h1{
-    color: #eb1736;
-    margin: 20px 0px 10px 0px;
-    font-size: 28px;
-}
-h3{
-    font-size: 20px;
-    margin: 5px 0px;
-}
-
-.game >.images{
-    margin-top: 20px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-around;
-}
-
-.game > .images img{
-    width: 150px;
-}
-
-.option{
-    margin-top: 10px;
+    font-size: 2em;
+    margin: 1em;
+  }
+  
+  #game-container {
     display: flex;
     justify-content: space-evenly;
-}
-
-.option > button{
-
-    padding: 10px 15px;
-    border-radius: 20px;
-    font-size: 15px;
-    outline: none;
+    margin: 1em 0;
+  }
+  
+  #user,
+  #comp {
+    width: 23em;
+    height: 23em;
+    padding: 1em;
+  }
+  
+  #choice {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2em;
+  }
+  
+  .choice-btn {
+    font-size: 1.7em;
+    padding: 1em;
+    border: none;
+    border-radius: 10px;
     cursor: pointer;
-    color:black;
-    text-transform: uppercase;
-    background-color: #9cb806;
-}
-.option > button:hover{
-    background-color: chartreuse;
-}
-
-#result , #score {
+    outline: none;
+  }
+  
+  .rock {
+    background-color: #536162;
     color: white;
+  }
+  
+  .scissor {
+    background-color: #ce1212;
+    color: white;
+  }
+  
+  .paper{
+    background-color: #e5b17f;
+  }
+  
+  #result {
     text-align: center;
-    font-size: 18px;
-}
-#score{
-    margin-bottom: 20px;
-}
-
-@media only screen and (max-width:400px){
-    .game{
-        width: 320px;
-        height: 320px;
-        margin-bottom: 20px;
+    font-size: 2em;
+    margin: 0;
+    margin-top: 1.3em;
+  }
+  
+  #score {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  
+  #user-score,
+  #comp-score,
+  .score-counter {
+    font-size: 1.5em;
+  }
+  
+  #user-choice,
+  #comp-choice {
+    width: 16em;
+    padding: 4em 0;
+  }
+  
+  #user-choice {
+    transform: scaleX(-1) rotate(270deg);
+  }
+  
+  #comp-choice {
+    transform: rotate(270deg);
+  }
+  
+  .animate {
+    animation: move 800ms paused ease-in-out infinite;
+  }
+  
+  .rev-animate {
+    animation: rev-move 800ms paused ease-in-out infinite;
+  }
+  
+  @keyframes move {
+    0%,
+    100% {
+      transform: translateY(-5em) rotate(90deg) scaleX(-1);
     }
-    
-    h1{
-        width: 100%;
-        margin:10px auto;
-        font-size: 20px;
+    20%,
+    60% {
+      transform: translateY(-1em) rotate(90deg) scaleX(-1);
     }
-    h3{
-        font-size: 15px;
+    40% {
+      transform: translateY(3em) rotate(90deg) scaleX(-1);
     }
-    
-    .game >.images{
-        margin-bottom: 15px;
+  }
+  
+  @keyframes rev-move {
+    0%,
+    100% {
+      transform: translateY(-5em) rotate(270deg);
     }
-    
-    .game > .images img{
-        width: 120px;
+    20%,
+    60% {
+      transform: translateY(-1em) rotate(270deg);
     }
-    
-    .option{
-        margin-top: 10px;
-        display: flex;
-        justify-content: space-evenly;
+    40% {
+      transform: translateY(3em) rotate(270deg);
     }
-    
-    .option > button{
-        padding: 8px 13px;
-        font-size: 10px;
-    }    
-    #result , #score {
-        width: 100%;
-        margin: auto;
-        font-size: 13px;
+  }
+  
+  @media only screen and (max-width: 500px) {
+    body {
+      font-size: 9px;
     }
-    #score{
-        margin-top: 5px;
-        margin-bottom: 20px;
+    .btn {
+      font-size: 1.5em;
     }
-}
+  }
+  
+  @media only screen and (max-width: 450px) {
+    body {
+      font-size: 7px;
+    }
+  }
+  
