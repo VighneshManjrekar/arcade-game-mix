@@ -6,6 +6,8 @@ function show() {
         nav.style.display = "none"
     }
 }
+document.addEventListener('contextmenu', event => event.preventDefault())
+
 var firebaseConfig = {
     apiKey: "AIzaSyBffsEoJZLDTc-hq-e1FkJdY-uvSofoBaE",
     authDomain: "arcade-highscore.firebaseapp.com",
@@ -20,7 +22,7 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 var database = firebase.database();
-var ref = database.ref('users/maro')
+var ref = database.ref('users/mario')
 ref.on('value', getData, errData)
 
 function getData(data) {

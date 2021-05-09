@@ -1,7 +1,8 @@
-*{
+* {
   box-sizing: border-box;
 }
 .status {
+  border-radius: 10px;
   width: 80%;
   margin: 0px auto 40px auto;
   display: flex;
@@ -12,14 +13,14 @@
   padding: 20px;
 }
 
-.hide{
+.hide {
   display: none;
 }
 
-.search-country{
+.search-country {
   position: relative;
 }
-.search-box{
+.search-box {
   position: absolute;
   z-index: 1;
   align-items: center;
@@ -29,7 +30,7 @@
   justify-content: space-between;
   background-color: #111;
 }
-.search-box input{
+.search-box input {
   width: 270px;
   height: 40px;
   border: none;
@@ -39,17 +40,17 @@
   font-size: 0.7em;
   outline: none;
 }
-.close-btn{
+.close-btn {
   color: white;
   font-size: 1em;
   margin: 5px;
   cursor: pointer;
-  padding-bottom: 5px;   
+  padding-bottom: 5px;
 }
-.country-list{
+.country-list {
   position: absolute;
   width: 300px;
-  top:30px;
+  top: 30px;
   height: 270px;
   font-size: 0.8em;
   background-color: #111;
@@ -59,30 +60,26 @@
 .country-list ul {
   width: 100%;
 }
-.country-list ul li{
+.country-list ul li {
   list-style-type: none;
   color: white;
   padding: 10px;
   cursor: pointer;
   font-size: 0.7em;
 }
-.country-list ul li:hover{
+.country-list ul li:hover {
   border-left: solid 3px #fff;
 }
-.country-list::-webkit-scrollbar-track
-{
-	background-color: transparent;
+.country-list::-webkit-scrollbar-track {
+  background-color: transparent;
 }
-.country-list::-webkit-scrollbar
-{
-	width: 7px;
+.country-list::-webkit-scrollbar {
+  width: 7px;
 }
-.country-list::-webkit-scrollbar-thumb
-{
+.country-list::-webkit-scrollbar-thumb {
   background-color: lightgray;
   border-radius: 20px;
 }
-
 
 .value {
   font-size: 1em;
@@ -134,6 +131,26 @@
     margin-bottom: 15px;
   }
 }
+
+#hs {
+  margin: auto;
+  text-align: left;
+}
+
+.table-row,
+td,
+th {
+  padding: 5px 15px;
+  margin-right: 20px;
+}
+
+#ac {
+  font-family: "Press Start 2P", cursive;
+  font-size: 35px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
 @media only screen and (max-width: 870px) {
   .status {
     display: flex;
@@ -148,5 +165,16 @@
   .change-country,
   .new-value {
     font-size: 0.6em;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  .table-row,
+  td {
+    padding: 3px 10px;
+    font-size: 0.7rem;
+  }
+  .table-score {
+    padding: 3px 5px;
   }
 }
