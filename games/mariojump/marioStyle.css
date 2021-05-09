@@ -5,7 +5,7 @@
   border: black solid 1px;
   box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.323);
   margin: auto;
-  background-image: url("https://raw.githubusercontent.com/VighneshManjrekar/ArcadeGamesMix/main/games/mariojump/images/bg1.png");
+  background-image: url("https://res.cloudinary.com/vighnesh/image/upload/v1618224611/marioJump/bg1_fzxdr0.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -14,7 +14,7 @@
 #mario {
   height: 50px;
   width: 20px;
-  background-image: url("https://raw.githubusercontent.com/VighneshManjrekar/ArcadeGamesMix/main/games/mariojump/images/block1.png");
+  background-image: url("https://res.cloudinary.com/vighnesh/image/upload/v1618224611/marioJump/block1_eg0gq5.png");
   position: relative;
   top: 200px;
   left: 5px;
@@ -23,7 +23,7 @@
 #pipe {
   width: 18px;
   height: 20px;
-  background-image: url("https://raw.githubusercontent.com/VighneshManjrekar/ArcadeGamesMix/main/games/mariojump/images/block.png");
+  background-image: url("https://res.cloudinary.com/vighnesh/image/upload/v1618224611/marioJump/block_ttktve.png");
   position: relative;
   top: 180px;
   left: 380px;

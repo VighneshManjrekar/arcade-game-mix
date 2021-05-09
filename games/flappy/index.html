@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arcade Games Mix</title>
+    <title>FlappyBird | Arcade Games Mania</title>
+    <link rel="icon" href="https://res.cloudinary.com/vighnesh/image/upload/v1618223969/img/favicon_qfzijn.ico">
     <link rel="stylesheet" href="../../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -14,33 +15,36 @@
     <script defer src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
     <script defer src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
-<script defer src="flappyScript.js"></script>
+    <script defer src="flappyScript.js"></script>
+    <script defer src="../../hide.js"></script>
 
 </head>
 
 <body>
     <div id="main">
-        <center><a href="index.html"><img src="https://magicplay.eu/files/logo%5B1%5D.png" id="image" width="300px"></a>
+        <center><a href="../../index.html"><img
+                    src="https://res.cloudinary.com/vighnesh/image/upload/v1618384485/img/logo2_ail1lo.webp" id="image"
+                    alt="arcade-games-mania logo" width="300px"></a>
         </center>
         <div class="mobile-disp">
-            <button id="nav-btn" onclick="show()"><i class="fa fa-bars" style="font-size:36px"></i></button>
+            <button id="nav-btn"><i class="fa fa-bars" style="font-size:36px"></i></button>
             <ul id="mob-nav">
                 <li><a href='../../index.html'><button type="button" class="btn btn-light">Home</button></a></li>
                 <li><a href='../../game.html'><button type="button" class="btn btn-success">Games</button></a></li>
-                <li><a href='https://arcade-games-mix.herokuapp.com/'><button type="button" class="btn btn-warning">ChatBox</button></a></li>
-                <li><a href='../../highscore.html'><button type="button" class="btn btn-danger">HighScores</button></a></li>
-                <!-- <li><a href='login.html'><button type="button" class="btn btn-danger">Login</button></a></li> -->
-                <!-- <li><a href='register.html'><button type="button" class="btn btn-dark">Register</button></a></li> -->
+                <li><a href='https://arcade-games-mix.herokuapp.com/' target="_blank"><button type="button"
+                            class="btn btn-warning">ChatBox</button></a></li>
+                <li><a href='../../highscore.html'><button type="button" class="btn btn-danger">HighScores</button></a>
+                </li>
             </ul>
         </div>
         <div class="menu">
             <ul>
                 <li><a href='../../index.html'><button type="button" class="btn btn-light">Home</button></a></li>
                 <li><a href='../../game.html'><button type="button" class="btn btn-success">Games</button></a></li>
-                <li><a href='https://arcade-games-mix.herokuapp.com/'><button type="button" class="btn btn-warning">ChatBox</button></a></li>
-                <li><a href='../../highscore.html'><button type="button" class="btn btn-danger">HighScores</button></a></li>
-                <!-- <li><a href='login.html'><button type="button" class="btn btn-danger">Login</button></a></li> -->
-                <!-- <li><a href='register.html'><button type="button" class="btn btn-dark">Register</button></a></li> -->
+                <li><a href='https://arcade-games-mix.herokuapp.com/' target="_blank"><button type="button"
+                            class="btn btn-warning">ChatBox</button></a></li>
+                <li><a href='../../highscore.html'><button type="button" class="btn btn-danger">HighScores</button></a>
+                </li>
             </ul>
         </div>
         <div class="game">
@@ -52,6 +56,7 @@
             <div class="ground"></div>
         </div>
     </div>
+    <div id="bottom-block"></div>
 </body>
 
 </html>

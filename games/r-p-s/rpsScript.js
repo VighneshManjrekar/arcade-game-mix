@@ -6,8 +6,9 @@ function show() {
         nav.style.display = "none"
     }
 }
+document.getElementById("nav-btn").addEventListener("click", show)
 
-document.addEventListener('contextmenu', event => event.preventDefault())
+
 
 var userChoice
 var choiceArray = ['r', 'p', 's', 'r', 'p', 's']
@@ -32,13 +33,13 @@ function choice(c) {
     compImg.style.animationPlayState = 'running'
     document.getElementById('result').innerHTML = `Result`
 
-    userImg.src = `images/r.png`
-    compImg.src = `images/r.png`
+    userImg.src = `https://res.cloudinary.com/vighnesh/image/upload/v1618223368/rps/r.png`
+    compImg.src = `https://res.cloudinary.com/vighnesh/image/upload/v1618223368/rps/r.png`
 
 
     setTimeout(() => {
 
-        
+
         if (userChoice == compChoice) {
 
             document.getElementById('result').innerHTML = `Draw`
@@ -63,8 +64,8 @@ function choice(c) {
     setTimeout(() => {
         userImg.style.animationPlayState = 'paused'
         compImg.style.animationPlayState = 'paused'
-        userImg.src = `images/${userChoice}.png`
-        compImg.src = `images/${compChoice}.png`
+        userImg.src = `https://res.cloudinary.com/vighnesh/image/upload/v1618223368/rps/${userChoice}.png`
+        compImg.src = `https://res.cloudinary.com/vighnesh/image/upload/v1618223368/rps/${compChoice}.png`
     }, 1500)
 
 }

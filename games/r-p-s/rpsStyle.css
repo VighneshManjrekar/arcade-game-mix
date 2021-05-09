@@ -40,21 +40,29 @@ body {
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    outline: none;
   }
   
   .rock {
     background-color: #536162;
     color: white;
   }
-  
+  .rock:hover{
+    background-color: #3b4041;
+  }
+
   .scissor {
     background-color: #ce1212;
     color: white;
   }
-  
+  .scissor:hover{
+    background-color: #ec0000;
+  }
+
   .paper{
     background-color: #e5b17f;
+  }
+  .paper:hover{
+    background-color: #e79f5b;
   }
   
   #result {
@@ -124,8 +132,10 @@ body {
       transform: translateY(3em) rotate(270deg);
     }
   }
-  
-  @media only screen and (max-width: 500px) {
+
+
+
+@media only screen and (max-width: 500px) {
     body {
       font-size: 9px;
     }
@@ -139,4 +149,3 @@ body {
       font-size: 7px;
     }
   }
-  

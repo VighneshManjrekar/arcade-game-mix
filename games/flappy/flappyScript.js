@@ -1,4 +1,5 @@
-document.addEventListener("DOMContentLoaded", () => {
+window.addEventListener("DOMContentLoaded", () => {
+    
     var nav = document.getElementById('mob-nav')
     function show() {
         if (nav.style.display == "none") {
@@ -7,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
             nav.style.display = "none"
         }
     }
+    document.getElementById("nav-btn").addEventListener("click",show)
 
     var firebaseConfig = {
         apiKey: "AIzaSyBffsEoJZLDTc-hq-e1FkJdY-uvSofoBaE",
@@ -44,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () => {
     var play = document.getElementById('play')
     const playGame = setInterval(function () {
         start()
-        play.innerHTML = i +'<span style="font-size:14px; ">\nTap to fly</span>'
+        play.innerHTML = i + '<span style="font-size:14px; ">\nTap to fly</span>'
     }, 1000)
 
     function start() {
@@ -161,5 +163,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }, 5000)
 
-    document.addEventListener('contextmenu', event => event.preventDefault())
 })

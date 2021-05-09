@@ -7,7 +7,7 @@
   display: flex;
   justify-content: space-around;
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
-    url("images/bg6.png");
+    url("https://res.cloudinary.com/vighnesh/image/upload/v1618224315/dumsharaz/bg6-min_eiwcd7.png");
   background-size: cover;
   position: center center;
   flex-flow: column;
