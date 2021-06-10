@@ -7,65 +7,48 @@ function show() {
     }
 }
 document.getElementById("nav-btn").addEventListener("click", show)
-
-
-
-var userChoice
-var choiceArray = ['r', 'p', 's', 'r', 'p', 's']
-var compChoice
-var userScore = 0
-var compScore = 0
-var userImg = document.getElementById('user-choice')
-var compImg = document.getElementById('comp-choice')
-
-function choice(c) {
-    userChoice = c.value
-
-    function ran() {
-        var random = Math.floor(Math.random() * 6)
-        compChoice = choiceArray[random]
-    }
-    ran()
-    console.log(userChoice)
-    console.log(compChoice)
-
-    userImg.style.animationPlayState = 'running'
-    compImg.style.animationPlayState = 'running'
-    document.getElementById('result').innerHTML = `Result`
-
+const choiceArray = ['r', 'p', 's', 'r', 'p', 's'];
+let userScore = 0;
+let compScore = 0;
+let userChoice = '';
+let compChoice = '';
+let userImg = document.getElementById('user-choice');
+let compImg = document.getElementById('comp-choice');
+function choice(v) {
     userImg.src = `https://res.cloudinary.com/vighnesh/image/upload/v1618223368/rps/r.png`
     compImg.src = `https://res.cloudinary.com/vighnesh/image/upload/v1618223368/rps/r.png`
-
-
-    setTimeout(() => {
-
-
+    userImg.style.animationPlayState = 'running';
+    compImg.style.animationPlayState = 'running';
+    userChoice = v.value;
+    compChoice = choiceArray[Math.floor(Math.random() * choiceArray.length)];
+    function check() {
         if (userChoice == compChoice) {
-
-            document.getElementById('result').innerHTML = `Draw`
-
+            return `Draw`
         } else if (userChoice == 'r' && compChoice == 's' ||
             userChoice == 'p' && compChoice == 'r' ||
             userChoice == 's' && compChoice == 'p') {
-
-            document.getElementById('result').innerHTML = `Won`
             userScore += 1
-            document.getElementById('user-score').innerHTML = userScore
-
+            return `Won`
         } else {
-
-            document.getElementById('result').innerHTML = `Lost`
             compScore += 1
-            document.getElementById('comp-score').innerHTML = compScore
+            return 'Lost'
         }
-
-    }, 2000)
-
+    }
+    let result = check();
     setTimeout(() => {
-        userImg.style.animationPlayState = 'paused'
-        compImg.style.animationPlayState = 'paused'
-        userImg.src = `https://res.cloudinary.com/vighnesh/image/upload/v1618223368/rps/${userChoice}.png`
-        compImg.src = `https://res.cloudinary.com/vighnesh/image/upload/v1618223368/rps/${compChoice}.png`
+        if (result == 'Won') {
+            updateImage(result)
+            document.getElementById('user-score').innerHTML = userScore;
+        } else {
+            updateImage(result)
+            document.getElementById('comp-score').innerHTML = compScore;
+        }
     }, 1500)
-
+}
+function updateImage(r) {
+    document.getElementById('result').innerHTML = `Result: ${r}`;
+    userImg.src = `https://res.cloudinary.com/vighnesh/image/upload/v1618223368/rps/${userChoice}.png`
+    compImg.src = `https://res.cloudinary.com/vighnesh/image/upload/v1618223368/rps/${compChoice}.png`
+    userImg.style.animationPlayState = 'paused';
+    compImg.style.animationPlayState = 'paused';
 }
